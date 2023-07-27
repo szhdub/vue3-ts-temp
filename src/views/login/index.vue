@@ -14,6 +14,7 @@
                     class="w-full">登录</el-button>
             </el-form-item>
         </el-form>
+        <svg-icon name="dog" />
     </div>
 </template>
   
@@ -22,7 +23,7 @@ import { reactive } from 'vue'
 import { User, Lock } from '@element-plus/icons-vue'
 import { useRoute, useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
-
+import request from '@/utils/request'
 
 const state = reactive({
     loading: false,
@@ -48,8 +49,20 @@ const onSubmit = async () => {
             type: 'warning'
         })
     }
+    console.log(import.meta.env.VITE_APP_BASE_API)
 
     state.loading = true;
+    request({
+        url: '/user/login',
+        method: 'post',
+        data: {
+            username,
+            password
+        }
+    }).then(res => {
+        console.log(res.data.token)
+    })
+
 
     console.log('submit!')
 }

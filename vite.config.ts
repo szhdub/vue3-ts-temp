@@ -71,9 +71,9 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     plugins: [
       vue(),
       createSvgIconsPlugin({
-        // Specify the icon folder to be cached
+        // 指定要缓存的图标文件夹
         iconDirs: [path.resolve(process.cwd(), 'src/assets/icons')],
-        // Specify symbolId format
+        // 指定symbolId格式
         symbolId: 'icon-[dir]-[name]',
       }),
       viteMockServe({
@@ -96,7 +96,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       postcss: {
         plugins: [tailwindcss, autoprefixer],
       },
-  
+
     },
 
   }

@@ -9,6 +9,8 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import router from './router'
 import pinia from './store'
+import 'virtual:svg-icons-register'
+import globalComponents from '@/components'
 
 
 
@@ -19,8 +21,10 @@ app.use(ElementPlus, {
     locale: zhCn,
 })
 app.use(ElementPlus)
-
+app.use(globalComponents)
+// @ts-ignore
 app.use(pinia)
 app.use(router)
+
 
 app.mount('#app')
