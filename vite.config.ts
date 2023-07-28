@@ -7,7 +7,6 @@ import { viteMockServe } from 'vite-plugin-mock'
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 
-
 const CWD = process.cwd();
 
 

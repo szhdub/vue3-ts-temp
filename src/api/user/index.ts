@@ -1,4 +1,4 @@
-import request from '@/util/request'
+import request from '@/utils/request'
 
 enum API {
     LOGIN_URL = '/user/login',
@@ -6,6 +6,6 @@ enum API {
 }
 
 
-export const reqLogin = (data: any) => request.post(API.LOGIN_URL, data);
+export const reqLogin = (data: Params.LoginParams) => request.post<any, Params.LoginResponseData>(API.LOGIN_URL, data);
 
-export const reqUserInfo = () => request.get(API.USERINFO_URL);
+export const reqUserInfo = () => request.get<any, Params.UserResponseData>(API.USERINFO_URL);
