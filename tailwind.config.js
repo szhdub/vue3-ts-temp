@@ -7,6 +7,12 @@ module.exports = {
       zIndex: {
         '100': '100',
       },
+      height: {
+        logo: '64px'
+      },
+      lineHeight: {
+        logo: '64px'
+      }
     },
   },
 };

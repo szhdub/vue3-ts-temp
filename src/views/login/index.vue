@@ -45,7 +45,7 @@ import { reactive } from "vue";
 import { User, Lock } from "@element-plus/icons-vue";
 import { useRoute, useRouter } from "vue-router";
 import { ElMessage } from "element-plus";
-import { reqLogin } from "@/api/user";
+// import { reqLogin } from "@/api/user";
 import { useStore } from "@/store/modules/user";
 
 const state = reactive({

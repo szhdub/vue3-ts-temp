@@ -1,0 +1,18 @@
+/* styles.css */
+.tooltip-container {
+    position: relative;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    padding: 6px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.tooltip.show {
+    display: block;
+}

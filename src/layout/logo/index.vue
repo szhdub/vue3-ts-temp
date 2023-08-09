@@ -1,7 +1,7 @@
 <template>
   <div class="logo">
     <img src="~@/assets/images/logo.png" alt="" class="h-8 mr-2" />
-    <h2 v-show="!collapsed" class="title">One Piece</h2>
+    <h2 v-show="!collapsed" class="title font-bold">One Piece</h2>
   </div>
 </template>
 <script setup lang="ts">
@@ -13,10 +13,7 @@ defineProps({
 </script>
 <style scoped>
 .logo {
-  @apply flex overflow-hidden whitespace-nowrap items-center;
-  height: 64px;
-  padding-left: 24px;
-  line-height: 64px;
+  @apply flex overflow-hidden whitespace-nowrap items-center h-logo pl-6 leading-logo;
 }
 
 .title {
